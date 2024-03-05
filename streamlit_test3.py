@@ -6,8 +6,11 @@ import openai
 import os 
 import base64
 from fpdf import FPDF
+from dotenv import load_dotenv
 
-openai.api_key = "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"
+load_dotenv() 
+
+openai.api_key = os.getenv('api_key')
 #gpt_model = "gpt-4"
 gpt_model = "gpt-3.5-turbo"
 
@@ -18,7 +21,6 @@ def create_download_link(val, filename):
 # Step 1: Define the structure of your Streamlit app
 def main():
     st.title("Educational Technology Course Assistant")
-    
     # Step 2: Define variables to hold data
     goals = []
     lesson_goals = ""
