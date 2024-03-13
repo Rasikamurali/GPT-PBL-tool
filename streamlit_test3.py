@@ -13,7 +13,8 @@ load_dotenv()
 #openai.api_key = os.getenv('OPENAI_API_KEY')
 
 #openai.api_key = os.environ.get('API_KEY')
-api_key = st.secrets["api_key"]
+api_key = st.secrets["OPENAI_API_KEY"]
+
 openai.api_key = api_key
 #gpt_model = "gpt-4"
 gpt_model = "gpt-3.5-turbo"
