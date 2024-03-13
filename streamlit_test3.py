@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+import secrets
 import openai 
 import os 
 import base64
@@ -10,9 +10,11 @@ from dotenv import load_dotenv
 
 load_dotenv() 
 
-openai.api_key = os.getenv('OPENAI_API_KEY')
+#openai.api_key = os.getenv('OPENAI_API_KEY')
 
 #openai.api_key = os.environ.get('API_KEY')
+api_key = st.secrets["api_key"]
+openai.api_key = api_key
 #gpt_model = "gpt-4"
 gpt_model = "gpt-3.5-turbo"
 
