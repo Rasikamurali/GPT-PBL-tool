@@ -8,7 +8,7 @@ import base64
 from fpdf import FPDF
 from gpt4 import call_gpt4
 
-# openai.api_key = "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"
+
 st.title('Welcome to the Learning Center')
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
