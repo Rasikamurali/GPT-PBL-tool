@@ -7,7 +7,7 @@ import os
 import base64
 from fpdf import FPDF
 
-openai.api_key = "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"
+
 st.title('Welcome to the Learning Center')
 
 #gpt_model = "gpt-4"
